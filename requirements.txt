@@ -11,3 +11,4 @@ pillow
 pydub
 scipy
 python-dotenv
+resemble
