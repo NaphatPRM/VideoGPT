@@ -7,7 +7,7 @@ imageio==2.25.1
 numpy
 pandas
 matplotlib
-pillow
+pillow==9.5.0
 pydub
 scipy
 python-dotenv
