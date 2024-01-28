@@ -1,6 +1,8 @@
 import streamlit as st
 import base64
 from streamlit_card import card
+import streamlit.components.v1 as components
+
 
 
 
@@ -17,18 +19,21 @@ def get_image_data(img_path):
 
 
 def showcase():
-
-    blog_col_1, blog_col_2, blog_col_3 = st.columns([1, 3, 1])
-
     st.markdown("--- ")
     st.header("🎥 Videos created using VideoGPT")
 
-    vid_col_3, vid_col_2, vid_col_1 = st.columns(3)
-    vid_col_1.video("")
-    vid_col_1.text("🤖  Historic Video ")
+
+    vid_col_1, vid_col_2, vid_col_3 = st.columns(3)
+    vid_col_1.video("static/videos/Resemble.ai.mp4")
+    vid_col_1.text("🤖 Revolutionizing Voiceovers: How Resemble.ai's Cloning Tech Created Our AI Video ")
+
+    vid_col_2.video("static/videos/Historic.mp4")
+    vid_col_2.text("🤖  Historic Shorts for Reels ")
+
+    vid_col_3.video("static/videos/Hackathon.mp4")
+    vid_col_3.text("🤖  Hackathon Passion ")
 
 
-    st.markdown("--- ")
 
 
 
@@ -62,7 +67,7 @@ def main():
 
     with col1:
         hasClicked = card(
-            title="🎬 TOPIC TO VIDEO",
+            title="🎬 Create Video",
             text="",
             image=video_image_1,
             url="/topic_to_video",
@@ -76,13 +81,17 @@ def main():
                 },
             },
         )
-
-
-
-
-
+    with col2:
+        pass
 
     showcase()
+
+
+
+
+
+
+
 
 
 if __name__ == "__main__":

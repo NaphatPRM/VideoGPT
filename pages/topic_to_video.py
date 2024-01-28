@@ -3,7 +3,7 @@ import tempfile
 import os
 from VideoGPT.core.video_generator import VideoGenerator
 st.set_page_config(page_title="Topic to Video", page_icon="📷", layout="centered")
-
+import time
 
 
 
@@ -57,6 +57,7 @@ def generate_video():
                 project_uuid = st.text_input("Enter your Resemble project uuid ", placeholder='Optional')
                 project_uuid = str(project_uuid)
             _, center, _ = st.columns([2, 3, 1])
+            temp_dir = tempfile.TemporaryDirectory()
             with center:
                 submit_button = st.form_submit_button(label="Generate Script 🚀")
 
@@ -115,13 +116,20 @@ def generate_video():
                 submit_button = st.button("Generate Video 🎥")
 
             if submit_button:
-                # temp_dir = tempfile.TemporaryDirectory()
+
                 temp_dir = tempfile.TemporaryDirectory()
+
+
+
 
                 with st.spinner("Generating voice for your video"):
                     st.info("Generating audio takes 30-60 seconds")
                     try:
-                        audio_path = os.path.join(temp_dir.name, "voice.mp3")
+
+
+                        audio_path = os.path.join(temp_dir.name , "voice.mp3")
+
+                        print(os.path.exists(audio_path))
 
                         updated_script_parts = []
                         for i in range(len(script_parts)):
@@ -139,8 +147,9 @@ def generate_video():
                             voice_uuid=voice_uuid,
                             project_uuid=project_uuid
                         )
-                        st.session_state.audio_path = audio_path
 
+
+                        st.session_state.audio_path = audio_path
                     except Exception as e:
                         print(e)
                         st.error("Error generating audio")
