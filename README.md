@@ -1,4 +1,4 @@
-#VideoGPT
+# VideoGPT
 
 ![VideoGPT-removebg-preview](https://github.com/sanjail3/VideoGPT/assets/86285670/f2d8743f-2ac6-414f-ba45-8b11f99341c5)
 
