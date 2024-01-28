@@ -35,7 +35,7 @@ https://github.com/sanjail3/VideoGPT/assets/86285670/4c5e0e94-b2c4-4d55-80d0-6f7
 1. Clone the repository:
 
     ```
-    git clone https://github.com/sanjail3/Vidiator.AI.git
+    git clone https://github.com/sanjail3/VideoGPT.git
     ```
 
 2. Install the Dependencies
