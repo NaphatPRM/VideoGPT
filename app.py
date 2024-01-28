@@ -24,14 +24,9 @@ def showcase():
     st.header("🎥 Videos created using VideoGPT")
 
     vid_col_3, vid_col_2, vid_col_1 = st.columns(3)
-    vid_col_1.video("./static/videos/noobies_intro.webm")
-    vid_col_1.text("🤖  : The AI Content Generator")
+    vid_col_1.video("")
+    vid_col_1.text("🤖  Historic Video ")
 
-    vid_col_2.video("./static/videos/lab_lab_intro.webm")
-    vid_col_2.text("🔬  : Community of AI Enthusiasts")
-
-    vid_col_3.video("./static/videos/clarifai_intro.webm")
-    vid_col_3.text("🧠  : AI for Everyone")
 
     st.markdown("--- ")
 

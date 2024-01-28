@@ -45,33 +45,18 @@ class AudioAI:
                 with open(output_file, 'wb') as async_audio_file:
                     async_audio_file.write(async_audio_response.content)
 
-            # prediction = self.llm.predict_by_bytes(
-            #     prompt.encode(), input_type="text", inference_params=inference_params
-            # )
-            # output_base64 = prediction.outputs[0].data.audio.base64
-            # with open(output_file, "wb") as f:
-            #     f.write(output_base64)
-            # return True
+
         except Exception as e:
             print(e)
             return False
 
-    def get_voice_ids(self):
-        """
-        Get the available voice IDs.
 
-        Returns:
-            dict: A dictionary containing the available voice IDs.
-        """
-        return self.voice_ids
 
 
 
 
 if __name__ == "__main__":
-    # from dotenv import load_dotenv
 
-    # load_dotenv()
     audio_ai = AudioAI()
     audio_ai.generate(
         prompt="weather is very good today. let's go to the beach",
