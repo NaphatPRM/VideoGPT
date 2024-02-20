@@ -21,6 +21,7 @@ def get_image_data(img_path):
 def showcase():
     st.markdown("--- ")
     st.header("🎥 Videos created using VideoGPT")
+    st.write("Welcome to VideoGPT")
 
 
     vid_col_1, vid_col_2, vid_col_3 = st.columns(3)
