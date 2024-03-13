@@ -134,7 +134,7 @@ class VideoConverter:
 
 if __name__ == "__main__":
     video_converter = VideoConverter()
-    folder = "/Data/aryanCodes3/noobies.ai/video"
+    folder = ""
     subtiles = [
         {"word": "Hello", "start": 0, "end": 1},
         {"word": "World", "start": 1, "end": 2},
@@ -477,6 +477,6 @@ if __name__ == "__main__":
     }
 
     video_converter.create_video(
-        "/Data/aryanCodes3/noobies.ai/video",
+        "",
         subtitles=real_subs,
     )
